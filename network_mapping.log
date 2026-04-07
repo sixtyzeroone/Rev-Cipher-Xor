@@ -1,0 +1,35 @@
+[1775563377] [INFO] === PENGUMPULAN DATA DIMULAI ===
+[1775563377] [USER] === USER ACCOUNTS ===
+[1775563377] [USER] Current: root (/root)
+[1775563377] [USER] User: sys
+[1775563377] [USER] User: sync
+[1775563377] [USER] User: games
+[1775563377] [USER] User: man
+[1775563377] [USER] User: lp
+[1775563377] [USER] User: mail
+[1775563377] [USER] User: news
+[1775563377] [USER] User: uucp
+[1775563377] [USER] User: proxy
+[1775563377] [USER] User: www-data
+[1775563377] [USER] User: backup
+[1775563377] [USER] User: list
+[1775563377] [USER] User: irc
+[1775563377] [USER] User: nobody
+[1775563377] [USER] User: systemd-network
+[1775563377] [USER] User: messagebus
+[1775563377] [USER] User: polkitd
+[1775563377] [USER] User: lynx
+[1775563377] [USER] User: Debian-exim
+[1775563377] [USER] User: bind
+[1775563377] [USER] User: debian-tor
+[1775563377] [SYSTEM] === SYSTEM INFO ===
+[1775563377] [SYSTEM] Hostname: localhost
+[1775563377] [SYSTEM] Linux 4.19.157-perf+ (aarch64)
+[1775563377] [NETWORK] === INTERFACES ===
+[1775563377] [SHARE] === NFS / CIFS SHARES ===
+[1775563377] [SHARE] adb /dev/usb-ffs/adb functionfs rw,relatime 0 0
+[1775563377] [SHARE] diag /dev/ffs-diag functionfs rw,relatime 0 0
+[1775563377] [SHARE] diag_mdm /dev/ffs-diag-1 functionfs rw,relatime 0 0
+[1775563377] [SHARE] diag_mdm2 /dev/ffs-diag-2 functionfs rw,relatime 0 0
+[1775563377] [PROCESS] === INTERESTING PROCESSES ===
+[1775563377] [INFO] === PENGUMPULAN DATA SELESAI ===
